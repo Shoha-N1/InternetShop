@@ -1,0 +1,36 @@
+.navbar {
+  ul {
+    display: flex;
+    gap: 30px;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.main-header {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  max-height: 70px;
+  background-color: #362e2e;
+}
+
+.main_header-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.heading {
+  a {
+    text-decoration: none;
+    color: antiquewhite;
+
+    span {
+      color: rgb(255, 172, 170);
+    }
+  }
+}
