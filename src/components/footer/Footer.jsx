@@ -1,4 +1,3 @@
-import NavLink from "../nav-link/NavLink";
 import "./Footer.scss";
 
 export default function Footer() {
