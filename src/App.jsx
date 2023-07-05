@@ -1,20 +1,71 @@
-import { Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+import Search from "./components/search/Search";
+import Button from "./components/btn/Button";
+import CardBody from "./components/cards/CardBody";
 import "./index.css";
+import AddProducts from "./components/addProducts/AddProducts";
 
-function App() {
+export default function App() {
+  const [items, setItem] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+  const [addedItems, setAddedItem] = useState([]);
+  const [showAddProducts, setShowAddProducts] = useState(false);
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products/")
+      .then((res) => res.json())
+      .then((data) => setItem(data));
+  }, []);
+  function changingSrarchData(e) {
+    setSearchValue(e.target.value);
+  }
+  const itmesFilter = items.filter((item) =>
+    item.title.toLowerCase().includes(searchValue.toLowerCase())
+  );
+
+  function addItem(item) {
+    item.addNumber = 1;
+    const itemArr = addedItems;
+    setAddedItem([...itemArr, item]);
+  }
+  // console.log(addedItems);
+  function removeItem(item) {
+    const newItems = addedItems.filter((addedItem) => addedItem.id !== item.id);
+    setAddedItem(newItems);
+    // console.log(addedItems);
+  }
   return (
-    <>
-      <div className="header_app">
-        <Header />
+    <div>
+      <div className="body__container">
+        <div className="nav">
+          <Header />
+          <div className="nav-right">
+            <Search
+              products={items}
+              value={searchValue}
+              onChangeData={changingSrarchData}
+            />
+            <Button num={addedItems.length} click={setShowAddProducts} />
+          </div>
+        </div>
+
+        {showAddProducts && (
+          <AddProducts
+            click={setShowAddProducts}
+            items={addedItems}
+            removeItem={removeItem}
+            setAddedItem={setAddedItem}
+          />
+        )}
+
+        <CardBody
+          products={itmesFilter}
+          addItem={addItem}
+          removeItem={removeItem}
+          addedItems={addedItems}
+        />
       </div>
-      <Outlet />
-      <div className="footer_app">
-        <Footer />
-      </div>
-    </>
+    </div>
   );
 }
-
-export default App;

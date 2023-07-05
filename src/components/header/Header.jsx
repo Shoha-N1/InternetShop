@@ -1,7 +1,6 @@
 import NavLink from "../nav-link/NavLink";
 import "./Header.scss";
 import ShopIcon from "./../../../public/shop_1.svg";
-import MenuIcon from "./../../../public/hamburger_2.svg";
 
 export default function Header() {
 

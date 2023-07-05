@@ -1,9 +1,9 @@
-import "./Card.scss";
+import "./Card.scss"
 
-export default function Card() {
+export default function Card({children, cardClass}){
   return (
-    <>
-      <div>Card</div>
-    </>
-  );
+    <div className={`${cardClass} card` }>
+      {children}
+    </div>
+  )
 }
