@@ -19,7 +19,6 @@ function reducer(state, action) {
   }
 }
 
-
 export default function CardList({ item, removeItem, setAddedItem, itemsArr }){
   const [state, dispatch] = useReducer(reducer, item);
 

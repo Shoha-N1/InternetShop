@@ -1,23 +1,22 @@
 import NavLink from "../nav-link/NavLink";
 import "./Header.scss";
 import ShopIcon from "./../../../public/shop_1.svg";
+import Button from "../btn/Button";
+import { useState } from "react";
 
 export default function Header() {
+ 
 
   const cart = (
     <span className="span_sec">
-    <NavLink to={"/card"}>
-   <div className="cart_div">
-   Cart
-   <img
-        style={{ width: "20px", height: "20px" }}
-        src={ShopIcon}
-      />
-      <p>0</p>
-   </div>
-    </NavLink>
-  </span>
-  )
+      <NavLink to={"/card"}>
+        <div className="cart_div">
+          Cart
+          <img style={{ width: "20px", height: "20px" }} src={ShopIcon} />
+        </div>
+      </NavLink>
+    </span>
+  );
 
   return (
     <>
@@ -44,9 +43,8 @@ export default function Header() {
                 <span className="span_first">
                   <NavLink to={"/login"}>Login</NavLink>
                   <NavLink to={"/register"}>Register</NavLink>
-                  <NavLink to={"/order-history"}>My Orders</NavLink>
                 </span>
-                {cart}
+              {cart}
               </div>
             </nav>
           </div>

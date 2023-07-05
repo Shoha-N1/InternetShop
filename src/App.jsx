@@ -58,7 +58,6 @@ export default function App() {
             setAddedItem={setAddedItem}
           />
         )}
-
         <CardBody
           products={itmesFilter}
           addItem={addItem}
