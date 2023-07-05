@@ -3,6 +3,7 @@ import Header from "../header/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "../footer/Footer";
 import { AuthContext } from "../../context/AuthContext";
+import Home from "../../pages/home/Home";
 
 
 function AuthorizedApp() {
@@ -12,7 +13,7 @@ function AuthorizedApp() {
       <div className="layout">
         <Header />
         <div className="layout__main">
-          <Outlet />
+        <Home />
         </div>
         <Footer />
       </div>

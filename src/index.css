@@ -4,14 +4,6 @@
   margin: 0 auto;
 }
 
-.header_app {
-  margin-bottom: 100px;
-}
-
-.footer_app {
-  margin-top: 50px;
-}
-
 :root {
   --soft-color: rgba(0, 0, 0, 0.5);
   --softer-color: rgba(0, 0, 0, 0.2);
@@ -44,26 +36,4 @@ margin-top: 10%;
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-@media screen and (max-width: 1040px) {
-  .body__container {
-    width: 95%;
-  }
-  .nav {
-    flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .body__container {
-    width: 100%;
-  }
-  .nav-right {
-    flex-direction: column;
-  }
-}
-@media print {
-  .nav {
-    display: none;
-  }
 }
