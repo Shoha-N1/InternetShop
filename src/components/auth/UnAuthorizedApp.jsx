@@ -12,7 +12,6 @@ export default function UnAuthorizedApp() {
   return (
     <div className="auth-wrapper">
       <div className="auth">
-
         <div style={getDisplayStyle("register")}>
           <Register />
         </div>
@@ -35,7 +34,7 @@ export default function UnAuthorizedApp() {
               style={getDisplayStyle("register")}
               onClick={() => setTab("login")}
             >
-              Log in
+              Login
             </button>
           </div>
         </div>

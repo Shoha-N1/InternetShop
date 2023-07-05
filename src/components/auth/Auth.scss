@@ -36,7 +36,7 @@
     h1 {
       color: #784747;
       font-weight: 600;
-      letter-spacing: .5px;
+      letter-spacing: 0.5px;
       font-size: 32px;
     }
 
@@ -76,17 +76,22 @@
     display: flex;
 
     p {
-      color: #bb84e8;
-      font-size: 15px;
+      cursor: pointer;
     }
 
     button {
+      margin-left: 5px;
+      font-size: 15px;
+      cursor: pointer;
       border: none;
       background-color: transparent;
-      color: #471aa0;
+      color: #5767bd;
+      font-weight: 600;
+      transition: 0.4s ease;
 
       &:hover {
-        color: rgb(25, 25, 255);
+        transition: 1s ease;
+        color: rgb(22, 22, 236);
       }
     }
   }
