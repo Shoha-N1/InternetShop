@@ -18,8 +18,6 @@ export default function Header() {
 
               <div className="header_div">
                 <span className="span_first">
-                  <NavLink to={"/login"}>Login</NavLink>
-                  <NavLink to={"/register"}>Register</NavLink>
                 </span>
               </div>
             </nav>

@@ -40,50 +40,52 @@ export default function Register() {
       .catch((err) => setError(err))
       .finally(() => {
         setLoading(false);
-        setMassage(
-          "You are succesfuly registrated now go to the login!" ||
-            "Enter the login"
-        );
+        setMassage("You are logged in now click login" || "login");
       });
   }
+  
+
   return (
     <>
       <div className="register-wrapper">
         <div className="register">
           <form onSubmit={handleSubmit} ref={elForm}>
-            {error && (
-              <small style={{ display: "none" }}>{error.toString()}</small>
-            )}
+            {error && <small>{error.toString()}</small>}
 
             <h1>Registration</h1>
 
-            <input
-              placeholder="Enter Username"
-              id="name"
-              type="text"
-              required
-            />
-
-            <input placeholder="Enter Email" id="email" type="email" required />
-
+            <div>
+              <label htmlFor="name">UserName:</label>
+              <input
+                placeholder="Enter Username"
+                id="name"
+                name="name"
+                type="text"
+                required
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <input
+                placeholder="Enter Email"
+                id="email"
+                name="email"
+                type="email"
+                required
+              />
+            </div>
             <div className="register__password">
+              <label htmlFor="password">Password:</label>
               <input
                 ref={elPassword}
                 placeholder="Enter Password"
+                name="password"
                 id="password"
                 type="text"
                 required
               />
-              <img
-                className="register__eye"
-                onClick={(evt) => handelePassword(evt)}
-                src={eye}
-                width={20}
-                height={20}
-                alt="eye"
-              />
             </div>
-            <p style={{ width: "400px", marginLeft: "50px" }}>{massage}</p>
+            <p>{massage}</p>
             <button type="submit">{loading ? "loading" : "Register"}</button>
           </form>
         </div>

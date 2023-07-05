@@ -1,5 +1,12 @@
+// import { useEffect, useState } from "react";
+// import "./index.css";
+// import Header from "../../components/header/Header";
+// import Search from "../../components/search/Search";
+// import Button from "../../components/btn/Button";
+// import AddProducts from "../../components/addProducts/AddProducts";
+// import CardBody from "../../components/cards/CardBody";
+
 import { useEffect, useState } from "react";
-import "./index.css";
 import Header from "../../components/header/Header";
 import Search from "../../components/search/Search";
 import Button from "../../components/btn/Button";

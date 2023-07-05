@@ -43,43 +43,38 @@ export default function Login() {
 
   return (
     <>
-      <div className="register-wrapper">
-        <div className="register">
-          <form onSubmit={handleSubmit} ref={elForm}>
-            {error && <small>{error.toString()}</small>}
-            <div>
-              <label htmlFor="email">Email</label>
-              <input
-                required
-                placeholder="Email..."
-                id="email"
-                name="email"
-                type="text"
-              />
-            </div>
-            <div className="register__password">
-              <label htmlFor="password">Password:</label>
-              <input
-                ref={elPassword}
-                placeholder="Password"
-                required
-                name="password"
-                id="password"
-                type="text"
-              />
-              <img
-                className="register__eye"
-                onClick={(evt) => handelePassword(evt)}
-                src={eye}
-                width={20}
-                height={20}
-                alt="eye"
-              />
-            </div>
-            <button type="submit">{loading ? "loading" : "Login"}</button>
-          </form>
-        </div>
+    <div className="register-wrapper">
+      <div className="register">
+        <form onSubmit={handleSubmit} ref={elForm}>
+          {error && <small>{error.toString()}</small>}
+
+          <h1>Login</h1>
+
+          <div>
+            <label htmlFor="email">Email</label>
+            <input
+              required
+              placeholder="Enter Email"
+              id="email"
+              name="email"
+              type="text"
+            />
+          </div>
+          <div className="register__password">
+            <label htmlFor="password">Password:</label>
+            <input
+              ref={elPassword}
+              placeholder="Enter Password"
+              required
+              name="password"
+              id="password"
+              type="text"
+            />
+          </div>
+          <button type="submit">{loading ? "loading" : "Enter to Project"}</button>
+        </form>
       </div>
-    </>
+    </div>
+  </>
   );
 }
