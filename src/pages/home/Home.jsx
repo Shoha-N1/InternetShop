@@ -1,11 +1,4 @@
-// import { useEffect, useState } from "react";
-// import "./index.css";
-// import Header from "../../components/header/Header";
-// import Search from "../../components/search/Search";
-// import Button from "../../components/btn/Button";
-// import AddProducts from "../../components/addProducts/AddProducts";
-// import CardBody from "../../components/cards/CardBody";
-
+import "./../../index.css";
 import { useEffect, useState } from "react";
 import Header from "../../components/header/Header";
 import Search from "../../components/search/Search";
@@ -36,11 +29,9 @@ export default function Home() {
     const itemArr = addedItems;
     setAddedItem([...itemArr, item]);
   }
-  // console.log(addedItems);
   function removeItem(item) {
     const newItems = addedItems.filter((addedItem) => addedItem.id !== item.id);
     setAddedItem(newItems);
-    // console.log(addedItems);
   }
   return (
     <div>
@@ -74,23 +65,3 @@ export default function Home() {
     </div>
   );
 }
-
-
-// import Header from "./components/header/Header";
-// import "./index.css";
-// import { Outlet } from "react-router-dom";
-// import Footer from "./components/footer/Footer";
-// export default function App() {
-//   return (
-//     <>
-//       <div className="header_app">
-//         <Header />
-//       </div>
-//       <Outlet />
-//       <div className="footer_app">
-//         <Footer />
-//       </div>
-//     </>
-//   );
-// }
-
