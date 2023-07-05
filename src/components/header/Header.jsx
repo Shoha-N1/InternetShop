@@ -15,14 +15,6 @@ export default function Header() {
             </h1>
 
             <nav className="navbar">
-              <ul>
-                <li>
-                  <NavLink to={"/"}>Home</NavLink>
-                </li>
-                <li>
-                  <NavLink to={"/contact"}>Contact</NavLink>
-                </li>
-              </ul>
 
               <div className="header_div">
                 <span className="span_first">

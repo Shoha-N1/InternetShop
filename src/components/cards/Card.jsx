@@ -12,9 +12,12 @@ const Card = ({ product, addItem, removeItem, addedItems }) => {
 
   // console.log(item);
   return (
+  
     <div className="card">
-      <img className="card__img" src={product.image} alt="" />
+      {console.log("Working")}
+      <img  className="card__img" src={product.image} alt="" />
       <div>
+        <h1>{product.id}</h1>
         <h2>{product.category}</h2>
         <h4>{product.title}</h4>
         <p>{product.description}</p>
