@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import Header from "./components/header/Header";
 import Search from "./components/search/Search";
-import Button from "./components/btn/Button";
 import CardBody from "./components/cards/CardBody";
 import "./index.css";
 import AddProducts from "./components/addProducts/AddProducts";
+import Button from "./components/btn/Button";
 
 export default function App() {
   const [items, setItem] = useState([]);
@@ -46,10 +46,9 @@ export default function App() {
               value={searchValue}
               onChangeData={changingSrarchData}
             />
-            <Button num={addedItems.length} click={setShowAddProducts} />
           </div>
         </div>
-
+        <Button num={addedItems.length} click={setShowAddProducts} />
         {showAddProducts && (
           <AddProducts
             click={setShowAddProducts}
@@ -68,3 +67,23 @@ export default function App() {
     </div>
   );
 }
+
+
+// import Header from "./components/header/Header";
+// import "./index.css";
+// import { Outlet } from "react-router-dom";
+// import Footer from "./components/footer/Footer";
+// export default function App() {
+//   return (
+//     <>
+//       <div className="header_app">
+//         <Header />
+//       </div>
+//       <Outlet />
+//       <div className="footer_app">
+//         <Footer />
+//       </div>
+//     </>
+//   );
+// }
+

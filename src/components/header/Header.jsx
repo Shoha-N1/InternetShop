@@ -1,11 +1,16 @@
 import NavLink from "../nav-link/NavLink";
 import "./Header.scss";
 import ShopIcon from "./../../../public/shop_1.svg";
+import { useEffect, useState } from "react";
 import Button from "../btn/Button";
-import { useState } from "react";
+import Search from "../search/Search";
+import AddProducts from "../addProducts/AddProducts";
 
 export default function Header() {
- 
+  const [items, setItem] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
+  const [addedItems, setAddedItem] = useState([]);
+  const [showAddProducts, setShowAddProducts] = useState(false);
 
   const cart = (
     <span className="span_sec">
@@ -17,6 +22,17 @@ export default function Header() {
       </NavLink>
     </span>
   );
+
+  function changingSearchData(e) {
+    setSearchValue(e.target.value);
+  }
+
+  // console.log(addedItems);
+  function removeItem(item) {
+    const newItems = addedItems.filter((addedItem) => addedItem.id !== item.id);
+    setAddedItem(newItems);
+    // console.log(addedItems);
+  }
 
   return (
     <>
@@ -44,7 +60,28 @@ export default function Header() {
                   <NavLink to={"/login"}>Login</NavLink>
                   <NavLink to={"/register"}>Register</NavLink>
                 </span>
-              {cart}
+
+                <div className="nav-right">
+                  <Search
+                    products={items}
+                    value={searchValue}
+                    onChangeData={changingSearchData}
+                  />
+                </div>
+                <div>
+
+                </div>
+
+                <Button num={addedItems.length} click={setShowAddProducts} />
+
+                {showAddProducts && (
+                  <AddProducts
+                    click={setShowAddProducts}
+                    items={addedItems}
+                    removeItem={removeItem}
+                    setAddedItem={setAddedItem}
+                  />
+                )}
               </div>
             </nav>
           </div>
