@@ -68,12 +68,7 @@ export default function Header() {
                     onChangeData={changingSearchData}
                   />
                 </div>
-                <div>
-
-                </div>
-
-                <Button num={addedItems.length} click={setShowAddProducts} />
-
+                
                 {showAddProducts && (
                   <AddProducts
                     click={setShowAddProducts}
