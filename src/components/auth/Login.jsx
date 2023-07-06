@@ -46,7 +46,7 @@ export default function Login() {
     <div className="register-wrapper">
       <div className="register">
         <form onSubmit={handleSubmit} ref={elForm}>
-          {error && <small>{error.toString()}</small>}
+          {error && <small style={{color: "red"}}>{error.toString()}</small>}
 
           <h1>Login</h1>
 
@@ -71,7 +71,7 @@ export default function Login() {
               type="text"
             />
           </div>
-          <button type="submit">{loading ? "loading" : "Enter to Project"}</button>
+          <button type="submit"> Enter to Project</button>
         </form>
       </div>
     </div>

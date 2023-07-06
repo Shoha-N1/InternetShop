@@ -33,22 +33,21 @@ p {
 }
 .add-item-btn,
 .remove-item-btn {
-  width: fit-content;
   padding: 0.5rem 1rem;
   display: block;
-  font-size: 1rem;
   background-color: var(--color-white);
-  color: var(--color-primary);
-  border: 2px solid var(--color-primary);
+  color: var(--color-waring);
+  border: 1px solid var(--color-waring);
   border-radius: 0.5rem;
   cursor: pointer;
+  transition: .5s ease;
 }
 .remove-item-btn {
   border-color: var(--color-danger);
   color: var(--color-danger);
 }
 .add-item-btn:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-waring);
   color: var(--color-white);
 }
 .remove-item-btn:hover {

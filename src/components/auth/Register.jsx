@@ -40,7 +40,7 @@ export default function Register() {
       .catch((err) => setError(err))
       .finally(() => {
         setLoading(false);
-        setMassage("You are logged in now click login" || "login");
+        setMassage("You are succesfuly registrated now go to the Login page" || "login");
       });
   }
   
@@ -50,7 +50,7 @@ export default function Register() {
       <div className="register-wrapper">
         <div className="register">
           <form onSubmit={handleSubmit} ref={elForm}>
-            {error && <small>{error.toString()}</small>}
+            {error && <small style={{color: "red"}}>{error.toString()}</small>}
 
             <h1>Registration</h1>
 
@@ -85,8 +85,8 @@ export default function Register() {
                 required
               />
             </div>
-            <p>{massage}</p>
-            <button type="submit">{loading ? "loading" : "Register"}</button>
+            <p style={{width: "400px", marginLeft: "-50px"}}>{massage}</p>
+            <button type="submit">Register</button>
           </form>
         </div>
       </div>
