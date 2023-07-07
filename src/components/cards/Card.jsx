@@ -23,6 +23,7 @@ const Card = ({ product, addItem, removeItem, addedItems }) => {
       </div>
       <div className="card-price-add">
         <span>Price : ${product.price}</span>
+        <button>View product</button>
         <button
           className={isAdded ? "add-item-btn" : "remove-item-btn"}
           onClick={() => {
