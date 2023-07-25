@@ -1,26 +1,26 @@
-import NavLink from "../nav-link/NavLink";
+// import NavLink from "../nav-link/NavLink";
 import "./Header.scss";
 
 export default function Header() {
 
   return (
     <>
-      <header className="main-header">
+     <header>
         <div className="container">
-          <div className="main_header-inner">
-            <h1 className="heading">
-              <a href="/">
-                Internet <span>Shop</span>
-              </a>
+          <div className="header-logo">
+            <h1 >
+            <a style={{color: "white"}} href="/">
+            Internet <span style={{color: "#ffd482"}}>Shop</span>
+            </a>
             </h1>
-
-            <nav className="navbar">
-
-              <div className="header_div">
-                <span className="span_first">
-                </span>
-              </div>
-            </nav>
+            <div className="header-box">
+              <a href='/cart'>
+                <img src="https://sbk-crud-ecommerce.netlify.app/assets/cart-e473b193.svg" alt="shop svg" />
+              </a>
+              <a href='/profile'>
+                <img src="https://sbk-crud-ecommerce.netlify.app/assets/user-868faee1.svg" alt="user svg" />
+              </a>
+            </div>
           </div>
         </div>
       </header>
