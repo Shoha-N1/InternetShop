@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './Cart.scss'
-import Header from '../components/header/Header';
 import icon from '../assets/icons8-delete.svg'
 import { useNavigate } from 'react-router-dom';
 import Footer from '../components/footer/Footer';
@@ -42,15 +41,11 @@ export default function Cart() {
   if (cartItems.length === 0) {
     return (
       <>
-        <Header />
         <div className="container">
-          <h2 className="cart__title">Your Cart</h2>
+          <h2 className="cart__title">Your Products</h2>
           <h3 style={{ textAlign: 'center', fontSize: '22px' }}>There are currently no products in your cart...</h3>
           <button className='cart__btn' onClick={() => navigate('/')}>Back to Home</button>
         </div>
-        <br />
-        <br />
-        <br />
         <Footer />
       </>
     );
@@ -59,7 +54,7 @@ export default function Cart() {
   return (
     <>
       <div className="container">
-        <h2 className="cart__title">Your Cart</h2>
+        <h2 className="cart__title">Your Products</h2>
         {cartItems.map((item) => (
           <div key={item.id}>
             <div className="cart">

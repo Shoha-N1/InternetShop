@@ -14,7 +14,7 @@ function AuthorizedApp() {
         <div className="layout__main">
      <Outlet />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );

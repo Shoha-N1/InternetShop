@@ -74,12 +74,12 @@ export default function Profile() {
               </div>
             ) : (
               <>
-                <h2 className="section__heading">Update Profile</h2>
+                <h2 className="section__heading">Your Profile</h2>
                 {error && (
                   <pre style={{ marginBottom: 10 }}>{error.toString()}</pre>
                 )}
                 <div className="section__layout">
-                  <div className="section__user">
+                  <div>
                     {info && (
                       <div className="section__user--box">
                         <div className="section__img--box">
