@@ -1,0 +1,116 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.auth-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  margin-left: -2%;
+}
+
+.register-wrapper {
+  width: 285px;
+  padding-bottom: 20px;
+}
+
+.register__password {
+  position: relative;
+}
+.register form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.register form h1 {
+  color: #784747;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 32px;
+}
+.register form button {
+  cursor: pointer;
+  color: #3c3f3e;
+  border-radius: 7px;
+  padding: 10px 47px;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.3s ease;
+  background-color: transparent;
+}
+.register form button:hover {
+  color: #fff;
+  background-color: #3c3f3e;
+  transition: 0.3s ease;
+}
+.register form .succes__message {
+  width: 700px;
+  color: green;
+  text-align: center;
+  font-size: 17px;
+}
+.register form input {
+  width: 500px;
+  padding: 17px 20px;
+  border-radius: 7px;
+}
+.register form label {
+  font-size: 15px;
+}
+
+.auth__btns {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+.auth__btn {
+  display: flex;
+}
+.auth__btn p {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 17px;
+  word-spacing: 1px;
+}
+.auth__btn button {
+  margin-left: 5px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #5767bd;
+  font-weight: 600;
+  transition: 0.4s ease;
+}
+.auth__btn button:hover {
+  transition: 1s ease;
+  color: rgb(22, 22, 236);
+}
+.auth-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.auth-logo a {
+  text-decoration: none;
+  color: transparent;
+}
+.auth-logo .logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.auth-logo .logo h2 {
+  padding-top: 5px;
+  color: #471aa0;
+  font-size: 44px;
+}/*# sourceMappingURL=Auth.css.map */

@@ -1,8 +1,15 @@
+body{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+button{
+  cursor: pointer;
+}
+
 .auth-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-left: -2%;
 }
 
@@ -16,11 +23,6 @@
     position: relative;
   }
 
-  p {
-    color: green;
-    text-align: 12px;
-    font-family: "Lato", sans-serif;
-  }
   form {
     display: flex;
     flex-direction: column;
@@ -37,25 +39,36 @@
 
     button {
       cursor: pointer;
-      background-color: #00ff62;
       color: #3c3f3e;
       border-radius: 7px;
-      padding: 7px 25px;
+      padding: 10px 47px;
       font-weight: 600;
       font-size: 16px;
       text-align: center;
       transition: 0.3s ease;
+      background-color: transparent;
 
       &:hover {
-        background-color: rgb(19, 224, 88);
+        color: #fff;
+        background-color: #3c3f3e;
         transition: 0.3s ease;
       }
     }
 
+    .succes__message{
+      width: 700px;
+      color: green;
+      text-align: center;
+      font-size: 17px;
+    }
+
     input {
       width: 500px;
-      padding: 10px 20px;
+      padding: 17px 20px;
       border-radius: 7px;
+    }
+    label{
+      font-size: 15px;
     }
   }
 }

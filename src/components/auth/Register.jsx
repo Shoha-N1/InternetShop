@@ -1,5 +1,5 @@
 import "./Auth.scss";
-import eye from "../../assets/eye.png";
+
 import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import axios from "axios";
@@ -47,6 +47,7 @@ export default function Register() {
 
   return (
     <>
+    
       <div className="register-wrapper">
         <div className="register">
           <form onSubmit={handleSubmit} ref={elForm}>
@@ -85,7 +86,7 @@ export default function Register() {
                 required
               />
             </div>
-            <p style={{width: "400px", marginLeft: "-50px"}}>{massage}</p>
+            <p className="succes__message">{massage}</p>
             <button type="submit">Register</button>
           </form>
         </div>

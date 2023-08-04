@@ -1,4 +1,3 @@
-
 header {
   background-color: #494543;
   padding: 20px 0;
@@ -14,25 +13,21 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  h1 {
-    font-size: 27px;
-    letter-spacing: .5px;
-
-    a {
-      text-decoration: none;
-    }
-  }
+}
+.header-logo h1 {
+  font-size: 27px;
+  letter-spacing: 0.5px;
+}
+.header-logo h1 a {
+  text-decoration: none;
 }
 
-.header-box{
+.header-box {
   display: flex;
   align-items: center;
   gap: 1.25rem;
-
-  img{
-    width: 30px;
-    height: 30px;
-  }
 }
-
+.header-box img {
+  width: 30px;
+  height: 30px;
+}/*# sourceMappingURL=Header.css.map */

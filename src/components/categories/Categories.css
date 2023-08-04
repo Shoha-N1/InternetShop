@@ -1,0 +1,67 @@
+.categories {
+  margin-top: 50px;
+}
+.categories__heading {
+  text-align: center;
+  font-size: 40px;
+  margin: 40px 0;
+}
+.categories__filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.categories__search {
+  width: 550px;
+  padding: 20px 10px;
+  outline: 5px solid transparent black;
+  border: 1px solid rgb(85, 85, 85);
+  border-radius: 10px;
+}
+.categories__price--box {
+  width: 49%;
+  border: 1px solid black;
+  padding: 17px 20px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 7px;
+}
+.categories__price--search {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.categories__price--boxes {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.categories__input {
+  border: 1px solid black;
+  outline: none;
+  padding: 10px;
+}
+.categories__pages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.categories__pages--btn {
+  cursor: pointer;
+  border: none;
+  padding: 0 56px;
+  line-height: 45px;
+  border-radius: 7px;
+  background-color: #ff6060;
+  color: white;
+  font-size: 16px;
+  box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+.categories__pages--btn:hover {
+  background: rgba(255, 136, 117, 0.9);
+  box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
+}/*# sourceMappingURL=Categories.css.map */
